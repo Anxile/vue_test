@@ -39,7 +39,7 @@
     1. 打标识：```<h1 ref="xxx">.....</h1>``` 或 ```<School ref="xxx"></School>```
     2. 获取：```this.$refs.xxx```
 
-## props配置项
+## props配置项(父传子！！！)
 
 1. 功能：让组件接收外部传过来的数据
 

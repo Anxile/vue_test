@@ -16,14 +16,9 @@ export default {
         //将用户的输入包装成为一个todo对象
         const todoObj = {id:nanoid(),title:e.target.value,done:false}
         //通知App组件添加一个数据
-        // this.addTodo(todoObj)
-
-
-        //清空输入框内数据
+        this.addTodo(todoObj)
+        //清空数据
         e.target.value=''
-
-        //通过绑定事件实现子组件向父组件传递参数
-        this.$emit('addTodo', todoObj)
     }
   },
 };

@@ -2,17 +2,13 @@
     <div id="root">
   <div class="todo-container">
     <div class="todo-wrap">
-      <MyHeader v-on:addTodo="addTodo"/>
+      <MyHeader :addTodo="addTodo"/>
       <MyList 
         :todos="todos" 
-        :checkTodo="checkTodo" @checkTodo="checkTodo"
+        :checkTodo="checkTodo" 
         :deleteItem="deleteItem"
       />
-      <MyFooter
-        :todos="todos" 
-        :checkAllTodo="checkAllTodo" @checkAllTodo="checkAllTodo" 
-        :clearAllTodo="clearAllTodo" @clearAllTodo="clearAllTodo"
-      />
+      <MyFooter :todos="todos" :checkAllTodo="checkAllTodo" :clearAllTodo="clearAllTodo"/>
     </div>
   </div>
 </div>
@@ -28,21 +24,12 @@
         components: { MyHeader,MyFooter,MyList },
         data() {
             return {
-                todos:/* [
+                todos:[
                     {id:'0001',title:'吃饭',done:true},
                     {id:'0002',title:'看书',done:false},
                     {id:'0003',title:'睡觉',done:true}
-                ] */
-                JSON.parse(localStorage.getItem('todos')) || []   //解决用户第一次使用空数组报错
+                ]
             }
-        },
-        watch: {
-          todos:{
-            deep:true,
-            handler(value){
-              localStorage.setItem('todos',JSON.stringify(value))
-            }
-          }
         },
         methods: {
           //添加一个todo

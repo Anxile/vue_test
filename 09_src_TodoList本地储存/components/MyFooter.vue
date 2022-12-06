@@ -25,11 +25,7 @@
                 this.checkAllTodo(e.target.checked)
             },
             clearAll(){
-                // this.clearAllTodo()
-
-
-                //绑定事件实现
-                this.$emit('clearAllTodo')
+                this.clearAllTodo()
             }
         },
         computed: {
@@ -41,11 +37,7 @@
                     return this.total === this.doneTotal && this.total > 0
                 } ,
                 set(value){
-                    // this.checkAllTodo(value)
-                    
-                    
-                    //绑定事件实现
-                    this.$emit('checkAllTodo', value)
+                    this.checkAllTodo(value)
                 }
             },
             total(){

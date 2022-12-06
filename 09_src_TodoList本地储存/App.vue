@@ -2,17 +2,13 @@
     <div id="root">
   <div class="todo-container">
     <div class="todo-wrap">
-      <MyHeader v-on:addTodo="addTodo"/>
+      <MyHeader :addTodo="addTodo"/>
       <MyList 
         :todos="todos" 
-        :checkTodo="checkTodo" @checkTodo="checkTodo"
+        :checkTodo="checkTodo" 
         :deleteItem="deleteItem"
       />
-      <MyFooter
-        :todos="todos" 
-        :checkAllTodo="checkAllTodo" @checkAllTodo="checkAllTodo" 
-        :clearAllTodo="clearAllTodo" @clearAllTodo="clearAllTodo"
-      />
+      <MyFooter :todos="todos" :checkAllTodo="checkAllTodo" :clearAllTodo="clearAllTodo"/>
     </div>
   </div>
 </div>

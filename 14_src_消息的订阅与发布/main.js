@@ -9,12 +9,17 @@ Vue.config.productionTip = false
 
 //应用（使用）插件
 // Vue.use(plugins,1,2,3)
+
+// const demo = Vue.extend({})
+// const d = new demo()
+
+// Vue.prototype.x = d
+
+
 //创建vm
 new Vue({
     el:'#app',
     render:h => h(App),
 
-    beforeCreate() {
-        Vue.prototype.$bus = this
-    },
+
 })

@@ -1,5 +1,5 @@
 <template>
-    <div class="demo">
+    <div class="school">
         <h2>学校名称：{{name}}</h2>
         <h2>学校地址：{{address}}</h2>
     </div>
@@ -14,11 +14,21 @@
                 address:'北平',
             }
         },
+        mounted(){
+            console.log('School',this.$bus)
+            this.$bus.$on('hello', (data)=>{
+                console.log('我是School组件，收到了数据',data)
+            })
+        },
+        beforeDestroy() {
+            this.$bus.$off('hello')
+        },
     }
 </script>
 
 <style scoped>
-    .demo{
+    .school{
         background-color: skyblue;
+        padding: 5px;
     }
 </style>

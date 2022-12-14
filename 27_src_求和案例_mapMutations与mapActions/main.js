@@ -9,7 +9,7 @@ Vue.config.productionTip = false
 //引入vue-resource
 import vueResource from 'vue-resource'
 
-import store from './store/'
+import store from './store'
 
 Vue.use(vueResource)
 //应用（使用）插件

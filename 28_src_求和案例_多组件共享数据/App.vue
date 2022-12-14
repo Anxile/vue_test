@@ -12,7 +12,7 @@
 
   export default {
     name: 'App',
-    components:{ Count, Person },
+    components:{ Count,Person },
     
   }
 </script>

@@ -9,7 +9,8 @@ Vue.config.productionTip = false
 //引入vue-resource
 import vueResource from 'vue-resource'
 
-import store from './store/'
+
+
 
 Vue.use(vueResource)
 //应用（使用）插件
@@ -18,7 +19,7 @@ Vue.use(vueResource)
 new Vue({
     el:'#app',
     render:h => h(App),
-    store,      //对象的简写形式
+
     beforeCreate() {
         Vue.prototype.$bus = this
     },
